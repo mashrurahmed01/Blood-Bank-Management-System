@@ -1,0 +1,25 @@
+@model BloodBank.Models.Donor
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Donor Details</h2>
+
+<p><b>Full Name:</b> @Model.FullName</p>
+
+<p><b>Blood Group:</b> @Model.BloodGroup</p>
+
+<p><b>Contact No:</b> @Model.ContactNo</p>
+
+<p><b>City:</b> @Model.City</p>
+
+<p><b>Last Donation Date:</b> @Model.LastDonationDate.ToString("yyyy-MM-dd")</p>
+
+<p>
+
+    <a href="/Donors/Edit/@Model.DonorId">Edit</a> |
+
+    <a href="/Donors">Back to List</a>
+
+</p>

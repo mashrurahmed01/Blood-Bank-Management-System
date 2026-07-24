@@ -1,0 +1,22 @@
+﻿@model IEnumerable<BloodBank.Models.Donor>
+
+<h2>Donors List by Last Donation Date</h2>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Blood Group</th>
+        <th>City</th>
+        <th>Last Date</th>
+    </tr>
+
+    @foreach (var donor in Model)
+    {
+        <tr>
+            <td>@donor.FullName</td>
+            <td>@donor.BloodGroup</td>
+            <td>@donor.City</td>
+            <td>@donor.LastDonationDate</td>
+        </tr>
+    }
+</table>

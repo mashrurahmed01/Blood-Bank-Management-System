@@ -1,0 +1,26 @@
+﻿@model IEnumerable<BloodBank.Models.Donor>
+
+<h2>Filter Donors by Blood Group</h2>
+
+<form method="get">
+    Blood Group:
+    <input type="text" name="bloodGroup" />
+    <input type="submit" value="Search" />
+</form>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Blood Group</th>
+        <th>City</th>
+    </tr>
+
+    @foreach (var donor in Model)
+    {
+        <tr>
+            <td>@donor.FullName</td>
+            <td>@donor.BloodGroup</td>
+            <td>@donor.City</td>
+        </tr>
+    }
+</table>

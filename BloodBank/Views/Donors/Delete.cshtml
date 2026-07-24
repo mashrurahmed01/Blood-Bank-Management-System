@@ -1,0 +1,35 @@
+@model BloodBank.Models.Donor
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete Donor</h2>
+
+<h3>Are you sure?</h3>
+
+<p><b>@Model.FullName</b></p>
+
+<p>@Model.BloodGroup</p>
+
+<p>@Model.ContactNo</p>
+
+<p>@Model.City</p>
+
+<p>@Model.LastDonationDate.ToString("yyyy-MM-dd")</p>
+
+<form method="post" action="/Donors/Delete">
+
+    <input type="hidden"
+           name="DonorId"
+           value="@Model.DonorId" />
+
+    <input type="submit" value="Delete" />
+
+</form>
+
+<p>
+
+    <a href="/Donors">Cancel</a>
+
+</p>

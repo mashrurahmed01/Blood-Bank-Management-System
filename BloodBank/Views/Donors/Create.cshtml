@@ -1,0 +1,44 @@
+@model BloodBank.Models.Donor
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create Donor</h2>
+
+<form method="post" action="/Donors/Create">
+
+    <p style="color:red">@Html.ValidationSummary()</p>
+
+    <p>
+        <label>Full Name</label><br />
+        <input type="text" name="FullName" value="@Model?.FullName" />
+    </p>
+
+    <p>
+        <label>Blood Group</label><br />
+        <input type="text" name="BloodGroup" value="@Model?.BloodGroup" />
+    </p>
+
+    <p>
+        <label>Contact No</label><br />
+        <input type="text" name="ContactNo" value="@Model?.ContactNo" />
+    </p>
+
+    <p>
+        <label>City</label><br />
+        <input type="text" name="City" value="@Model?.City" />
+    </p>
+
+    <p>
+        <label>Last Donation Date</label><br />
+        <input type="date" name="LastDonationDate" />
+    </p>
+
+    <input type="submit" value="Create" />
+
+</form>
+
+<p>
+    <a href="/Donors">Back to List</a>
+</p>
